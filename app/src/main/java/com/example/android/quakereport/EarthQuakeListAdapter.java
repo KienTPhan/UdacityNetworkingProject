@@ -68,11 +68,17 @@ public class EarthQuakeListAdapter extends ArrayAdapter<EarthquakeItem> {
             primaryLocation = location;
         }
 
-        /** Find the Textview in the list_item.xml layout with the ID locationListItemText */
-        TextView locationTextView = (TextView) listItemView.findViewById(R.id.locationListItemText);
+        /** Find the TextView in the list_item.xml layout with the ID offsetLocation */
+        TextView offsetLocationTextView = (TextView) listItemView.findViewById(R.id.offsetLocation);
 
-        /** Set locationTextView.text to EarthquakeItem.getLocation */
-        locationTextView.setText(currentEarthquake.getmLocation());
+        /** Display the offsetLocation in its Textview */
+        offsetLocationTextView.setText(offsetLocation);
+
+        /** Find the TextView in the list_item.xml layout with the ID primaryLocation */
+        TextView primaryLocationTextView = (TextView) listItemView.findViewById(R.id.primaryLocation);
+
+        /** Display the PrimaryLocation in its Textview */
+        primaryLocationTextView.setText(primaryLocation);
 
         /** Create a new Date object from the time in milliseconds of the earthquake */
         Date dateObject = new Date(currentEarthquake.getmTimeInMilliseconds());
