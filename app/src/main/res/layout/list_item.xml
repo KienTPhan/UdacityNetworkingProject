@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_marginLeft="16dp"
-        android:id="@+id/magnitudeListItemText"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="60dp"
-        android:text="item1"
-        android:gravity="center_vertical"
-        android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/magnitudeListItemText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            tools:text="8.9"/>
 
-    <TextView
-        android:id="@+id/locationListItemText"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="60dp"
-        android:text="item1"
-        android:gravity="center_vertical"
-        android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/offsetLocation"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"/>
 
-    <TextView
-        android:id="@+id/dateListItemText"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="60dp"
-        android:text="item1"
-        android:gravity="center_vertical"
-        android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/locationListItemText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            tools:text="San Francisco, CA"/>
 
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            tools:text="Mar 6, 2010"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            tools:text="3:00pm"/>
 
 </LinearLayout>

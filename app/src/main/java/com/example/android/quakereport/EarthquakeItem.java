@@ -13,18 +13,18 @@ public class EarthquakeItem {
     private String mLocation;
 
     /** date the earthquake occurred */
-    private String mDate;
+    private Long mTimeInMilliseconds;
 
     /**
      * constructor
      * @param magnitude the magnitude of the earthquake
      * @param location  the location earthquake happened in
-     * @param date      the date in which the earthquake occurred
+     * @param timeInMilliseconds the time in milliseconds (from the Epoch) in which the earthquake occurred
      */
-    public EarthquakeItem(String magnitude, String location, String date){
-        mMagnitude = magnitude;
-        mLocation  = location;
-        mDate      = date;
+    public EarthquakeItem(String magnitude, String location, Long timeInMilliseconds){
+        mMagnitude              = magnitude;
+        mLocation               = location;
+        mTimeInMilliseconds     = timeInMilliseconds;
     }
 
     /** get the magnitude of the earthquake */
@@ -38,8 +38,8 @@ public class EarthquakeItem {
     }
 
     /** get the date the earthquake occured */
-    public String getmDate() {
-        return mDate;
+    public Long getmTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
 }
