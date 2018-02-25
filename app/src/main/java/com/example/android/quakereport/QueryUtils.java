@@ -63,7 +63,7 @@ public final class QueryUtils {
                 JSONObject properties = earquakesArray.getJSONObject(i).getJSONObject("properties");
 
                 //Extract “mag” for magnitude
-                String mag = properties.getString("mag");
+                double mag = properties.getDouble("mag");
 
                 //Extract “place” for location
                 String place = properties.getString("place");

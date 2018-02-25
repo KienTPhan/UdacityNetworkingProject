@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.text.DecimalFormat;
 /**
  * Created by kienphan on 2/11/18.
  */
@@ -45,8 +46,12 @@ public class EarthQuakeListAdapter extends ArrayAdapter<EarthquakeItem> {
         /** Find the TextView in the list_item.xml layout with the ID mag */
         TextView magnitudeTextView = (TextView) listItemView.findViewById(R.id.magnitudeListItemText);
 
-        /** set magnitudeTextView.text to EarthquakeItem.getMagnitude */
-        magnitudeTextView.setText(currentEarthquake.getmMagnitude());
+        /** change magnitude to the right decimal format **/
+
+        String formattedMagnitude  = formatMagnitude(currentEarthquake.getmMagnitude());
+
+        /** set magnitudeTextView.text to output */
+        magnitudeTextView.setText(formattedMagnitude);
 
         /** get the location string from currentEarthquakeItem to split it into offsetLocation and primaryLocation */
         String location = currentEarthquake.getmLocation();
@@ -119,5 +124,14 @@ public class EarthQuakeListAdapter extends ArrayAdapter<EarthquakeItem> {
     private String formatTime(Date dateObject) {
         SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
         return timeFormat.format(dateObject);
+    }
+
+    /**
+     * return the formatted magnitude string showing 1 decimal place (i.e. "3.2")
+     * from a decimal magnitude value.
+     */
+    private String formatMagnitude(double magnitude){
+        DecimalFormat magnitudeFormat = new DecimalFormat("0.0");
+        return magnitudeFormat.format(magnitude);
     }
 }
