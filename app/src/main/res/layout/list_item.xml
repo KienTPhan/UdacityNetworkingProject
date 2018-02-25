@@ -6,24 +6,28 @@
 
         <TextView
             android:id="@+id/magnitudeListItemText"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="60dp"
-            android:gravity="center_vertical"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
             android:textSize="16sp"
-            tools:text="8.9"/>
+            android:background="@drawable/magnitude_circle"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/white"
+            tools:text="8.9" />
 
         <TextView
             android:id="@+id/offsetLocation"
             android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp" />
 
         <TextView
             android:id="@+id/primaryLocation"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:textSize="16sp"
             tools:text="San Francisco, CA"/>
@@ -32,7 +36,7 @@
             android:id="@+id/date"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:textSize="16sp"
             tools:text="Mar 6, 2010"/>
@@ -40,7 +44,7 @@
             android:id="@+id/time"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:textSize="16sp"
             tools:text="3:00pm"/>
