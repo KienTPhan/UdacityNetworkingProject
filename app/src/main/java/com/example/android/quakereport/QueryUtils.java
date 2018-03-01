@@ -83,8 +83,12 @@ public final class QueryUtils {
                 //Extract “time” for time
                 Long time = properties.getLong("time");
 
-                //Create Earthquake java object from magnitude, location, and time
-                EarthquakeItem newEarthQuake = new EarthquakeItem(mag,place, time);
+                //Extract "URL" for more user's who wants more details
+                String url = properties.getString("url");
+                Log.w("testing",url);
+
+                //Create Earthquake java object from magnitude, location, and time, url
+                EarthquakeItem newEarthQuake = new EarthquakeItem(mag,place, time, url);
 
                 //Add earthquake to list of earthquakes
                 earthquakes.add(newEarthQuake);
